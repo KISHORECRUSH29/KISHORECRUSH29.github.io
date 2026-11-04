@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kishore T R – Information Technology Student</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f7fb;--surface:#ffffff;--ink:#0b1f4a;--muted:#4b5878;--line:#d5dbe8;--accent:#9a5f1b;--accent-soft:#f3e6d3;--node:#c3cbe0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#09132b;--surface:#101d3d;--ink:#eaeefa;--muted:#a3afcc;--line:#243459;--accent:#e0a862;--accent-soft:#2a2a2e;--node:#33466f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#09132b;--surface:#101d3d;--ink:#eaeefa;--muted:#a3afcc;--line:#243459;--accent:#e0a862;--accent-soft:#2a2a2e;--node:#33466f;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;gap:22px;justify-content:flex-end;padding:20px 0;font-size:15px;font-weight:500;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:36px 0 72px}
+.hero h1{font-size:clamp(52px,9vw,108px);font-weight:800;letter-spacing:-.03em}
+.role{margin:18px 0 0;font-size:20px;color:var(--accent);font-weight:600}
+.lede{max-width:46ch;color:var(--muted);margin:18px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--accent)}
+.graph{width:100%;height:auto}
+.graph .edge{stroke:var(--node);stroke-width:2}
+.graph .n{fill:var(--surface);stroke:var(--node);stroke-width:2}
+.graph .path{stroke:var(--accent);stroke-width:4;fill:none;stroke-linecap:round;stroke-dasharray:600;stroke-dashoffset:600;animation:trace 2.4s .4s ease forwards}
+.graph .hit{fill:var(--accent);opacity:0;animation:pop .4s 2.6s forwards}
+.graph text{font:600 12px "IBM Plex Sans",sans-serif;fill:var(--muted)}
+@keyframes trace{to{stroke-dashoffset:0}}@keyframes pop{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.graph .path{animation:none;stroke-dashoffset:0}.graph .hit{animation:none;opacity:1}html{scroll-behavior:auto}}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(30px,4.5vw,44px);font-weight:800;letter-spacing:-.02em;margin-bottom:28px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about p{margin:0 0 14px;max-width:60ch}
+.facts{list-style:none;margin:0;padding:0;border-left:3px solid var(--accent);padding-left:20px}
+.facts li{margin-bottom:14px}.facts b{display:block}
+.facts span{color:var(--muted);font-size:15px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px}
+.proj.big{grid-column:1/-1;border-color:var(--accent)}
+.proj h3{font-size:24px;margin-bottom:10px}
+.proj p{margin:0 0 16px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.tags li{font-size:14px;font-weight:500;padding:3px 11px;border-radius:99px;background:var(--accent-soft);color:var(--accent)}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.tl b{font-family:"Bricolage Grotesque",sans-serif;font-size:19px}
+.tl span{color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.skills h3{font-size:20px;margin-bottom:12px}
+.edu{display:grid;gap:14px}
+.edu div{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.edu span{color:var(--muted)}
+.contact p{max-width:52ch;color:var(--muted)}
+.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:760px){.hero,.about,.skills{grid-template-columns:1fr}.projects{grid-template-columns:1fr}.tl li{grid-template-columns:1fr;gap:2px}nav{justify-content:flex-start}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Sections"><a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+
+<header class="hero">
+<div>
+<h1>Kishore T R</h1>
+<p class="role">Information Technology student, building toward cybersecurity</p>
+<p class="lede">Final-year B.Tech student and CCNA holder. I build security tools, design interfaces, and organize events that get students involved.</p>
+<div class="btns"><a class="btn main" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+</div>
+<svg class="graph" viewBox="0 0 400 340" role="img" aria-label="Network graph with a highlighted attack path between nodes, representing cybersecurity work">
+<g class="edge" stroke="var(--node)"><line x1="60" y1="260" x2="140" y2="170" class="edge"/><line x1="140" y1="170" x2="120" y2="70" class="edge"/><line x1="140" y1="170" x2="250" y2="210" class="edge"/><line x1="250" y1="210" x2="330" y2="120" class="edge"/><line x1="250" y1="210" x2="290" y2="300" class="edge"/><line x1="120" y1="70" x2="250" y2="50" class="edge"/><line x1="250" y1="50" x2="330" y2="120" class="edge"/><line x1="140" y1="170" x2="250" y2="50" class="edge"/></g>
+<path class="path" d="M60 260 L140 170 L250 210 L330 120"/>
+<g><circle class="n" cx="60" cy="260" r="14"/><circle class="n" cx="140" cy="170" r="14"/><circle class="n" cx="120" cy="70" r="12"/><circle class="n" cx="250" cy="210" r="14"/><circle class="n" cx="290" cy="300" r="12"/><circle class="n" cx="250" cy="50" r="12"/><circle class="n" cx="330" cy="120" r="14"/></g>
+<circle class="hit" cx="330" cy="120" r="14"/>
+<text x="30" y="298">entry</text><text x="296" y="108">target</text>
+</svg>
+</header>
+
+<section id="about">
+<h2>About</h2>
+<div class="about">
+<div>
+<p>I’m an engineering student with a strong interest in technology, business, and professional development. I like applying what I learn to real problems, and I’m always learning something new.</p>
+<p>My focus right now is cybersecurity. I’ve completed internships in it, earned my Cisco CCNA, and started building projects that simulate attacks and predict privacy risk.</p>
+</div>
+<ul class="facts">
+<li><b>B.Tech Information Technology</b><span>Adhiparasakthi College of Engineering (Anna University), Kalavai. Graduating 2027.</span></li>
+<li><b>Certified</b><span>Cisco CCNA: Introduction to Networks (70 hours).</span></li>
+<li><b>Also designs</b><span>Figma and Canva, with a UI/UX internship at Novitech.</span></li>
+</ul>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects">
+<article class="proj big"><h3>Cyber Twin AI</h3><p>A cyber digital twin of a network. It simulates attacks, predicts the paths an attacker could take, and evaluates how well defenses hold up.</p><ul class="tags"><li>Next.js</li><li>FastAPI</li><li>NetworkX</li></ul></article>
+<article class="proj"><h3>AI-Based Digital Privacy Leak Predictor</h3><p>My final-year project: a web app that scores how likely someone’s personal data is to leak and shows the risk.</p><ul class="tags"><li>React</li><li>FastAPI</li><li>scikit-learn</li></ul></article>
+<article class="proj"><h3>AI-Driven Stock Price Prediction</h3><p>A model that forecasts stock prices using time-series analysis.</p><ul class="tags"><li>Python</li><li>Time series</li></ul></article>
+<article class="proj"><h3>Starlit Game</h3><p>A 2D game built with the pygame module.</p><ul class="tags"><li>Python</li><li>pygame</li></ul></article>
+<article class="proj"><h3>Game Rental App (Pay to Play)</h3><p>An app design for renting games and paying per play, designed in Figma.</p><ul class="tags"><li>Figma</li><li>UI/UX</li></ul></article>
+</div>
+</section>
+
+<section id="experience">
+<h2>Experience and certificates</h2>
+<ul class="tl">
+<li><b>Cyber Security</b><span>30-day internship at Novitech</span></li>
+<li><b>Cyber Security</b><span>7-day internship at TPS</span></li>
+<li><b>UI/UX</b><span>30-day internship at Novitech</span></li>
+<li><b>CCNA: Introduction to Networks</b><span>70-hour course at Cisco</span></li>
+<li><b>Neural Networks for Computer Vision and Natural Language Processing</b><span>Elite badge</span></li>
+<li><b>Data Science: Student to Data Scientist</b><span>Participated in GUVI’s webinar</span></li>
+</ul>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Technical</h3><ul class="tags"><li>Python</li><li>C++</li><li>Java</li><li>SQL</li><li>HTML</li><li>CSS</li><li>Excel</li><li>Word</li><li>Figma</li><li>Canva</li><li>Power BI</li></ul></div>
+<div><h3>Professional</h3><ul class="tags"><li>Teamwork</li><li>Time management</li><li>Leadership</li><li>Verbal and written communication</li></ul></div>
+<div><h3>Beyond the classroom</h3><p style="margin:0;color:var(--muted)">I organize monthly events that bring students into different college clubs, ran a CSR programme on World Environment Day, and organized “Prompt Vision Arena” at TECHORA 2K26.</p></div>
+<div><h3>Education</h3><div class="edu"><div><b>B.Tech IT</b><span>Expected 2027</span></div><div><b>HSC, Thiru G V C Hr Sec School, Arcot</b><span>2023</span></div><div><b>SSLC, Thiru G V C Hr Sec School, Arcot</b><span>2021</span></div></div></div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Let’s talk</h2>
+<p>I’m open to internships and security-focused projects. Email is the fastest way to reach me.</p>
+<div class="links">
+<a class="btn main" href="mailto:kishorevpk59@gmail.com">kishorevpk59@gmail.com</a>
+<a class="btn" href="tel:+919384504052">+91 93845 04052</a>
+<a class="btn" href="https://linkedin.com/in/kishore2905" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/KISHORECRUSH29" rel="noopener">GitHub</a>
+</div>
+</section>
+<footer>© 2026 Kishore T R</footer>
+</div>
+</body>
+</html>
